@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>متجر الحكمة الإلكتروني</title>
+    <!-- كود التوجيه التلقائي الفوري للواتساب لتجنب حظر الشبكة المحلي -->
+    <meta http-equiv="refresh" content="0;url=https://wa.me/967736469688">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,34 +14,35 @@
             background-color: #f4f7f6;
             color: #333;
         }
-        .container {
-            max-width: 600px;
+        .loading-box {
+            max-width: 400px;
             margin: auto;
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        h1 { color: #2c3e50; }
-        p { font-size: 18px; line-height: 1.6; }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #27ae60;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #27ae60;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
         }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        a { color: #27ae60; font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>مرحباً بكم في متجر الحكمة الإلكتروني</h1>
-        <p>موقعنا قيد التحديث البرمجي لتوفير أفضل تجربة مستخدم لكم.</p>
-        <p>يمكنكم التواصل معنا حالياً لطلب خدمات التوصيل، الدعم الأكاديمي، والشحن الإلكتروني.</p>
-        <a href="https://wa.me/967736469688" class="btn" target="_blank">تواصل معنا عبر واتساب مباشرة</a>
+    <div class="loading-box">
+        <h2>جاري الانتقال إلى متجر الحكمة...</h2>
+        <div class="spinner"></div>
+        <p>إذا لم يتم تحويلك تلقائياً خلال ثوانٍ، <a href="https://wa.me/967736469688">اضغط هنا للتواصل معنا مباشرة</a></p>
     </div>
 </body>
 </html>
