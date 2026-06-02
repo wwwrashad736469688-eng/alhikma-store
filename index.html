@@ -139,6 +139,26 @@ footer{
 <footer>
     © بقالة طلاب الحكمة - جميع الحقوق محفوظة
 </footer>
+<script>
+function sendOrder() {
 
+let message =
+"السلام عليكم، أرغب بطلب منتجات من بقالة طلاب الحكمة%0A%0A";
+
+message += "- عصير الربيع × 1%0A";
+message += "- أرز الفخامة × 1%0A";
+message += "- زيت الباشا 4 لتر × 1%0A%0A";
+
+message += "الاسم:%0A";
+message += "العنوان:%0A";
+message += "رقم التواصل:%0A";
+
+window.open(
+"https://wa.me/967777654085?text=" + message,
+"_blank"
+);
+
+}
+</script>
 </body>
 </html>
