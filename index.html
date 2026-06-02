@@ -179,5 +179,63 @@ alert("تمت إضافة المنتج للسلة");
 }
 
 </script>
+
+<h3 id="cartCount">عدد المنتجات بالسلة: 0</h3><div id="cartItems"></div><h3 id="cartTotal">إجمالي الطلب: 0 ريال</h3><button onclick="sendCartToWhatsApp()" class="btn">
+إرسال السلة إلى واتساب
+</button><script>
+
+let cart=[];
+
+function addToCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+updateCart();
+}
+
+function updateCart(){
+
+document.getElementById("cartCount").innerText =
+"عدد المنتجات بالسلة: " + cart.length;
+
+let html="";
+let total=0;
+
+cart.forEach(item=>{
+html += "<p>" + item.name + " - " + item.price + " ريال</p>";
+total += item.price;
+});
+
+document.getElementById("cartItems").innerHTML = html;
+
+document.getElementById("cartTotal").innerText =
+"إجمالي الطلب: " + total + " ريال";
+}
+
+function sendCartToWhatsApp(){
+
+let message =
+"السلام عليكم، أرغب بطلب المنتجات التالية:%0A%0A";
+
+let total=0;
+
+cart.forEach(item=>{
+message += "- " + item.name + " (" + item.price + " ريال)%0A";
+total += item.price;
+});
+
+message += "%0Aإجمالي الطلب: " + total + " ريال";
+
+window.open(
+"https://wa.me/967777654085?text=" + message,
+"_blank"
+);
+
+}
+
+</script>
 </body>
 </html>
