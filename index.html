@@ -159,6 +159,25 @@ window.open(
 );
 
 }
+
+</script>
+<script>
+
+let cart=[];
+
+function addToCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+document.getElementById("cartCount").innerText =
+"عدد المنتجات بالسلة: " + cart.length;
+
+alert("تمت إضافة المنتج للسلة");
+}
+
 </script>
 </body>
 </html>
