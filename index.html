@@ -1,38 +1,192 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>بقالة طلاب الحكمة</title>
-<style>
-body{
-font-family:Tahoma;
-background:#f5f5f5;
-text-align:center;
-padding:40px;
-}
-.btn{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:15px 25px;
-text-decoration:none;
-border-radius:10px;
-margin:10px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بقالة طلاب الحكمة</title>
+    <!-- استيراد خط تجوال المميز للمواقع العربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* الهيدر أو الترويسة */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        header .tags {
+            font-size: 1rem;
+            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* الحاوية الرئيسية */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* قسم أقسام البقالة المميزة */
+        .sections-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #2a5298;
+            font-weight: 700;
+        }
+
+        .grid-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card i {
+            font-size: 2rem;
+            color: #25D366;
+            margin-bottom: 10px;
+        }
+
+        /* زر الطلب العائم أو المثبت */
+        .cta-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp i {
+            margin-left: 10px;
+            font-size: 1.6rem;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 
-<h1>بقالة طلاب الحكمة</h1>
+    <!-- الترويسة (Header) -->
+    <header>
+        <h1>بقالة طلاب الحكمة</h1>
+        <p class="subtitle">خدمتكم شرف لنا</p>
+        <p class="tags">مواد غذائية • مستلزمات الطلاب • خدمات التوصيل</p>
+    </header>
 
-<p>خدمتكم شرف لنا</p>
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        
+        <h2 class="sections-title">ماذا نقدم لكم؟</h2>
+        
+        <!-- شبكة تصنيفات المنتجات لتسهيل التصفح -->
+        <div class="grid-categories">
+            <div class="category-card">
+                <i class="fas fa-apple-alt"></i>
+                <h3>مواد غذائية</h3>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-pencil-alt"></i>
+                <h3>أدوات ومستلزمات</h3>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-box-open"></i>
+                <h3>سناكات ومشروبات</h3>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>توصيل سريع</h3>
+            </div>
+        </div>
 
-<p>مواد غذائية - مستلزمات الطلاب - خدمات التوصيل</p>
+        <!-- زر طلب الواتساب المطور -->
+        <div class="cta-container">
+            <!-- استبدل الرقم 123456789 برقم الواتساب الخاص بالبقالة مع رمز الدولة بدون أصفار -->
+            <a href="https://wa.me/123456789?text=مرحباً%20بقالة%20الحكمة،%20أود%20طلب%20بعض%20المنتجات" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                اطلب عبر واتساب
+            </a>
+        </div>
 
-<a class="btn" href="https://wa.me/967777654085">
-اطلب عبر واتساب
-</a>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        &copy; ٢٠٢٦ بقالة طلاب الحكمة - جميع الحقوق محفوظة.
+    </footer>
 
 </body>
 </html>
